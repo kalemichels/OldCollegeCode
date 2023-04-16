@@ -1,0 +1,35 @@
+Required Variables       |
+--------------------------
+
+Random Numbers for:
+Temperature.random
+Customers.random
+Customers.pricechange.random
+Days.leftinseason.static
+
+Changeable Numbers for:
+Temperature.actual.value
+Customers.actual.value
+Bank.account.actual.value
+Instock.lemon.actual.value
+Instock.cups.actual.value
+Instock.sugar.actual.value
+--> Insert Later --> Instock.water.actual.value <-- Insert Later <--
+Customers.pricechange.actual.value
+
+
+Input Choices (strings or number values)  |
+-------------------------------------------
+
+Would you like to open the lemonade stand today? y/n
+	Would you like to purchase anything for stock? y/n
+		Which would you like: Lemons, Cups, Sugar, (water)? 1,2,3,4::L,C,S,W::
+			How much of (^^) would you like to purchase? number value ##
+				Are you sure you would like to purchase (##^^##) amount of (^^item^^)? y/n
+			Would you like to purchase anything else? y/n
+				(repeat ''which would you like'')
+	
+	Would you like to change your price? y/n
+		Would you like to increase or decrease? 1,2::I,D:: Increase, Decrease::
+		By how much (multiples of 5) max 5x (increase/decrease of 25 Cents)? 1,2,3,4,5:: 5,10,15,20,25::
+			Are you sure you would like to (increase/decrease) your price by (^^##$$##^^)? y/n

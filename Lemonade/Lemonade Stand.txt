@@ -1,0 +1,101 @@
+#include <iostream>
+#include <cstdlib>
+#include <iomanip>
+
+using std::cout;
+using std::cin;
+using std::endl;
+
+int main()
+{
+    int TempRand;
+    int CustomerRand;
+    int GoGame;
+    int OpenChoice;
+    int MoneyBalance = 0;
+    int PurchaseChoice;
+    int PurchaseChoice2;
+    int LemonPurchase;
+    int LemonStock = 0;
+    int CupPurchase;
+    int CupStock = 0;
+    int SugarPurchase;
+    int SugarStock = 0;
+    int CustomerTempBonus;
+    int CustomerPriceBonus;
+    int CustomerTempRemainderHolding;
+    
+    //this sections covers 1. Wether to open the store or not. 2. Temperature. >>including making sure the temperature is above 60 degrees.
+    while (OpenChoice == 1,2)
+    {
+    TempRand = 1 + rand() % 110;
+    
+    while (TempRand < 60)
+    {
+    TempRand = 1 + rand() % 110;
+}
+
+    cout << "The current temperature is " << TempRand << endl;
+    
+    cout << "Would you like to open the Lemonade Stand Today? 1. Yes 2. No" << endl;
+    cin >> OpenChoice;
+    if (OpenChoice == 1)
+    {
+                   //This is the entire section about purchasing stock items.
+                   cout << "You currently have a balance of $" << MoneyBalance << ".  Would you like to purchase any stock?" << endl;
+                   cin >> PurchaseChoice;
+                   while (PurchaseChoice == 1)
+                   {
+                                      cout << "What would you like to Purchase? 1. Lemons 2. Cups 3. Sugar" << endl;
+                                      cin >> PurchaseChoice2;
+                                      if (PurchaseChoice2 == 1)
+                                      {
+                                      cout << "You currently have " << LemonStock/2 << " Lemons in stock.  One Lemon can make two glasses of Lemonade.  How many Lemons would you like to purchase?" << endl;
+                                      cin >> LemonPurchase;
+                                      LemonStock = LemonStock + LemonPurchase*2;
+                                      }
+                                      if (PurchaseChoice2 == 2)
+                                      {
+                                      cout << "You currently have " << CupStock << " Cups in stock.  How many packages (10 cups) would you like to purchase?" << endl;
+                                      cin >> CupPurchase;
+                                      CupStock = CupStock + CupPurchase*10;
+                                      }
+                                      if (PurchaseChoice2 == 3)
+                                      {
+                                      cout << "You currently have " << SugarStock/20 << " Lbs. of Sugar in stock.  One Lb. can make twenty glasses of Lemonade.  How many Lbs. would you like to purchase?" << endl;
+                                      cin >> SugarPurchase;
+                                      SugarStock = SugarStock + SugarPurchase*20;
+                                      }
+                   cout << "Would you like to Purchase Anything else?" << endl;
+                   cin >> PurchaseChoice;
+                   }
+                    //this is the end of the section about buying stock items.                  
+                    
+                    //this will be the section calculating the number of customers that will buy lemonade for the day.
+                    CustomerRand = 0;
+                    while (CustomerRand < 35)
+                    {
+                    CustomerRand = 1 + rand() % 15;
+                    CustomerRand = CustomerRand * 4;
+                    cout << CustomerRand << " Beginning CR #" << endl;
+                    }
+                    CustomerTempRemainderHolding = 0;
+                    CustomerTempBonus = 0;
+                    CustomerTempRemainderHolding = TempRand % 10;
+                    CustomerTempBonus = TempRand - CustomerTempRemainderHolding;
+                    CustomerTempBonus = CustomerTempBonus/10;
+                    CustomerRand = CustomerRand + CustomerTempBonus;
+                    cout << CustomerTempRemainderHolding << " CTRH" << endl;
+                    cout << CustomerTempBonus << " CTB" << endl;
+                    cout << CustomerRand << " Customers bought your Lemonade today.  Congratulations!" << endl;
+                    //this is the end of the section calculating the number of customers that will buy lemonade for the day.                  
+    
+    
+    }
+    if (OpenChoice == 221629)
+    {
+    return 0;
+
+}
+}
+}

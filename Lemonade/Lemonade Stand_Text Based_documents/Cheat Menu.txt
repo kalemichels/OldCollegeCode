@@ -1,0 +1,50 @@
+}
+    
+    if (OpenChoice == 90838)
+{
+    Cheating = 1;
+               while (Cheating == 1)
+               {
+               int CheatersChoice = 0;
+               cout << "Welcome to the extra special, secret, cheat section" << endl;
+               cout << "What would you like to edit?" << endl;
+               cout << "1. Money Balance 2. Lemon Balance 3. Cup Balance 4. Sugar Balance 5. Quit cheating" << endl;
+               cin >> CheatersChoice;
+               // CHEATER CHOICE 1** //
+               if (CheatersChoice == 1)
+               {
+                                  cout << "What would you like to set your Money balance to (remember give it to me in cents ex. $1.00 = 100)" << endl;
+                                  cin >> MoneyBalance;
+                                  MoneyBalanceCents = MoneyBalance % 100;
+                   MoneyBalanceDollars = MoneyBalance - MoneyBalanceCents;
+                   MoneyBalanceDollars = MoneyBalanceDollars/100;
+                   if (MoneyBalanceCents < 10)
+                   {
+                   cout << "Your new balance is $" << MoneyBalanceDollars << "." << SpacerZero << MoneyBalanceCents << endl;
+                   }
+                   else
+                   {
+                   cout << "Your new balance is $" << MoneyBalanceDollars << "." << MoneyBalanceCents << endl;
+                   }
+                   cout << "Would you like to continue cheating?" << endl;
+                   cin >> CheatersChoice;
+               }
+               // CHEATERS CHOICE 1**//
+               
+               // CHEATERS CHOICE 5**//
+               if (CheatersChoice == 5)
+               {
+                                  cout << "Returning to Main Game" << endl;
+                OpenChoice = 1;
+                Cheating = 0;
+               }
+               // CHEATERS CHOICE 5**//
+     }
+}
+
+if (OpenChoice == 221629)
+    {
+    return 0;
+}
+}
+}
